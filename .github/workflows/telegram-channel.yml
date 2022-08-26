@@ -25,7 +25,7 @@ jobs:
                 text,
                 "parse_mode": "HTML"
               })
-              core.info(JSON.stringify(response))
+              core.info(response.data.ok)
             }catch(error){
               core.setFailed(error.message);
             }
