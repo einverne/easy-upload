@@ -25,7 +25,7 @@ jobs:
                 text,
                 "parse_mode": "HTML"
               })
-              core.info(stdout)
+              core.info(response)
             }catch(error){
               core.setFailed(error.message);
             }
