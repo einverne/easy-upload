@@ -1,7 +1,7 @@
 name: send telegram channel message
 on:
   push:
-    paths: '.github/workflow'
+    paths: '.github/workflows/telegram-channel.yml'
     branches: [tg-msg-action]
 jobs:
   release:
