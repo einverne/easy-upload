@@ -21,12 +21,12 @@ jobs:
               const axios = require('axios')
               const text = process.env.tgMsg
               const response = await axios.post('https://api.telegram.org/bot${{secrets.TG_BOT_TOKEN}}/sendMessage', {
-                "chat_id": "-100152260997",
-                text,
+                "chat_id": "-1001522609970",
+                text: '',
                 "parse_mode": "HTML"
               })
               if(!response.data.ok){
-                core.setFailed(response.data.description);
+                throw new Error(response.data.description)
               }
             }catch(error){
               core.setFailed(error.message);
