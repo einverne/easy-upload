@@ -18,7 +18,7 @@ jobs:
             try {
               const { default: createTgChannelMsg } = await import('${{ github.workspace }}/scripts/tg-channel.js');
               await createTgChannelMsg(core)
-              const got = await import('got')
+              const got = await import('${{ github.workspace }}/node_modules/got')
               const text = process.env.tgMsg
               const response = await got.post('https://api.telegram.org/bot${{secrets.TG_BOT_TOKEN}}/sendMessage', {
                 "chat_id": "-1001522609970",
